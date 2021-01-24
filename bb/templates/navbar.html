@@ -1,0 +1,24 @@
+{% url 'public:index' as index_url %}
+{% url 'public:about' as about_url %}
+{% url 'public:videos' as videos_url %}
+{% url 'public:discography' as discography_url %}
+
+<nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <a href="{{ index_url }}">BVDBATCH</a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><a class="nav-link py-3 px-0 px-lg-3 js-scroll-trigger {% if request.path == videos_url %}active{% endif %}" href="{{ videos_url }}" >Videos</a></li>
+                    <li><a class="nav-link py-3 px-0 px-lg-3 js-scroll-trigger {% if request.path == about_url %}active{% endif %}" href="{{ about_url }}">About</a></li>
+                    <li><a class="nav-link py-3 px-0 px-lg-3 js-scroll-trigger {% if request.path == discography_url %}active{% endif %}" href="{{ discography_url }}">Discography</a></li>
+                </ul>
+            </div>
+            <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </div>
+    </nav>

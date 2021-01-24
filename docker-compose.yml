@@ -1,0 +1,47 @@
+version: "3.7"
+
+
+x-service-volumes: &service-volumes
+  - ./:/app/:rw,cached
+
+x-database-variables: &database-variables
+  POSTGRES_DB: "${DB_NAME}"
+  POSTGRES_USER: "${DB_USER}"
+  POSTGRES_PASSWORD: "${DB_PW}"
+
+x-app-variables: &app-variables
+  <<: *database-variables
+  POSTGRES_HOST: "${DB_HOST}"
+  SECRET_KEY: "${SECRET_KEY}"
+  ALLOWED_HOSTS: "${ALLOWED_HOSTS}"
+
+
+services:
+  website:
+    image: badbatch:latest
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes: *service-volumes
+    environment: *app-variables
+    depends_on:
+      - db_migrate
+    ports:
+      - "8000:8000"
+
+  db_migrate:
+    image: badbatch:latest
+    command: python manage.py migrate
+    volumes: *service-volumes
+    environment: *app-variables
+    depends_on: 
+      - postgres
+
+  postgres:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment: *database-variables
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+volumes:
+  db-data:

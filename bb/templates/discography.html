@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}Discography{% endblock %}
+
+{% block bg %}
+class="discography_bg_class"
+{% endblock %}
+
+{% block content %}
+    {% if tracks %}
+    <div class="row">
+        {% for track in tracks %}
+        <div class="column">
+            <iframe src="{{ track.url }}" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+        </div>
+        {% endfor %}
+    </div>   
+    {% else %}
+        <div>There are no tracks to display</div>
+    {% endif %}
+{% endblock %}

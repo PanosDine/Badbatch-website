@@ -1,0 +1,110 @@
+#main {
+    padding-top: 74px;
+}
+
+@media (min-width: 992px) {
+    #main {
+      padding-top: 104px;
+    }
+}
+
+#copyright {
+    color: white;
+}
+
+#copyright a + a {
+    padding-left: 2em;
+}
+
+#about_page_background{
+    font-size:x-large;
+    text-align: left;
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: ivory;
+    /*font-family:"alex_brushregular";*/
+}
+
+body, html {
+    height: 100%;
+    min-height: 2000px;
+}
+
+.base_bg_class {
+    background-image: url("../img/3.jpg");
+    height: 100%;
+    min-height: 2000px;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about_bg_class {
+    background-image: url("../img/1.jpg");
+    height: 100%;
+    min-height: 2000px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.videos_bg_class {
+    background-image: url("../img/4.jpg");
+    height: 100%;
+    min-height: 2000px;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.discography_bg_class {
+    background-image: url("../img/2.jpg");
+    height: 100%;
+    min-height: 2000px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bi.bi-instagram {
+    color: white;
+}
+
+.bi.bi-youtube {
+    color: white;
+}
+
+.bi.bi-facebook {
+    color: white;
+}
+
+.bi.bi-linkedin {
+    color: white;
+}
+
+p a + a {
+    padding-left: 2em;
+}
+
+footer {
+    position: fixed;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    margin-left: 2%;
+    height: 50; 
+    width: 100%;
+    text-align:left;
+    font-size: 0.8em;
+    bottom: 0;
+    font-size: 12px;
+}
+
+.row {
+    padding: 5%;
+    margin:0px;
+    text-align: center;
+}
+.column {
+    padding: 3%;
+}
