@@ -10,9 +10,7 @@ class VideoAdmin(AdminVideoMixin, admin.ModelAdmin):
     list_filter = ['title']
     search_fields = ['title']
     
-
 admin.site.register(Video, VideoAdmin)
-
 
 class TrackAdmin(admin.ModelAdmin):
     fieldsets = [
