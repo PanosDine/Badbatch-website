@@ -8,12 +8,26 @@
     }
 }
 
+@font-face {
+    font-family: 'gourdie_gothic_blackblack';
+    src: url('../fonts/gourdiegothic-ep2w-webfont.eot');
+    src: url('../fonts/gourdiegothic-ep2w-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gourdiegothic-ep2w-webfont.woff2') format('woff2'),
+         url('../fonts/gourdiegothic-ep2w-webfont.woff') format('woff'),
+         url('../fonts/gourdiegothic-ep2w-webfont.ttf') format('truetype'),
+         url('../fonts/gourdiegothic-ep2w-webfont.svg#gourdie_gothic_blackblack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 #copyright {
     color: white;
 }
 
 #copyright a + a {
-    padding-left: 2em;
+    padding-left: 1em;
+    border-width: 0px;
 }
 
 #about_page_background{
@@ -23,7 +37,6 @@
     margin-left: 5%;
     margin-right: 5%;
     color: ivory;
-    /*font-family:"alex_brushregular";*/
 }
 
 body, html {
@@ -35,15 +48,18 @@ body, html {
     background-image: url("../img/3.jpg");
     height: 100%;
     min-height: 2000px;
-    background-position: top;
+    background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 
 .about_bg_class {
     background-image: url("../img/1.jpg");
     height: 100%;
     min-height: 2000px;
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -53,7 +69,8 @@ body, html {
     background-image: url("../img/4.jpg");
     height: 100%;
     min-height: 2000px;
-    background-position: top;
+    background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -62,26 +79,12 @@ body, html {
     background-image: url("../img/2.jpg");
     height: 100%;
     min-height: 2000px;
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.bi.bi-instagram {
-    color: white;
-}
-
-.bi.bi-youtube {
-    color: white;
-}
-
-.bi.bi-facebook {
-    color: white;
-}
-
-.bi.bi-linkedin {
-    color: white;
-}
 
 p a + a {
     padding-left: 2em;
@@ -108,3 +111,14 @@ footer {
 .column {
     padding: 3%;
 }
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    font-family: "gourdie_gothic_blackblack";
+}
+
+.nav {
+    font-family: "gourdie_gothic_blackblack";
+}
+

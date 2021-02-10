@@ -7,7 +7,8 @@ from django.http import HttpRequest, HttpResponse
 """simple views, no real functionality here, just rendering the 
 corresponding templates"""
 def index(request: HttpRequest) -> HttpResponse:
-    return render(request, 'index.html')
+    latest_video = Video.objects.all().latest('id')
+    return render(request, 'index.html', {'obj':latest_video})
 
 def about(request: HttpRequest) -> HttpResponse:
     return render(request, 'about.html')
